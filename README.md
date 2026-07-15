@@ -152,14 +152,6 @@ APK debug akan dihasilkan di `app/build/outputs/apk/debug/`
 
 Data demo di-seed otomatis saat aplikasi pertama kali dijalankan.
 
-## Design System
-
-Lihat [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) untuk detail lengkap:
-- **Warna:** Primary `#10B981` (Emerald), Tertiary `#0D9488` (Teal), Background `#F5F5FA`
-- **Font:** Poppins Regular/Medium/SemiBold/Bold
-- **Desain:** Flat — cards tanpa stroke, elevation rendah (2dp), input flat fill
-- **Padding:** Screen 24dp, cards 20dp, list items 16dp
-
 ## License
 
 Proyek ini untuk keperluan tugas akhir. Tidak tersedia untuk distribusi publik.
