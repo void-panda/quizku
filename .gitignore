@@ -35,3 +35,7 @@ sample_soal_teknologi_web.xlsx
 
 # Design files (bukan source code)
 smart_quis_design/
+
+# Markdown files (except README)
+*.md
+!README.md
