@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+
+    <dimen name="corner_sm">8dp</dimen>
+    <dimen name="corner_md">12dp</dimen>
+    <dimen name="corner_lg">16dp</dimen>
+    <dimen name="corner_circle">90dp</dimen>
+
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="button_height">64dp</dimen>
+    <dimen name="button_corner">8dp</dimen>
+    <dimen name="stroke_default">1dp</dimen>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Large green circle background -->
+    <path
+        android:pathData="M100,100m-70,0a70,70 0,1 1,140 0a70,70 0,1 1,-140 0"
+        android:fillColor="#CCD1FAE5" />
+    <!-- Book shape -->
+    <path
+        android:pathData="M55,65 L100,50 L145,65 L145,130 L100,115 L55,130 Z"
+        android:fillColor="#FF10B981" />
+    <!-- Book spine line -->
+    <path
+        android:pathData="M100,50 L100,115"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="2.5" />
+    <!-- Page lines left -->
+    <path
+        android:pathData="M65,78 L93,70"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeAlpha="0.7" />
+    <path
+        android:pathData="M65,88 L93,80"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeAlpha="0.7" />
+    <path
+        android:pathData="M65,98 L93,90"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeAlpha="0.7" />
+    <!-- Page lines right -->
+    <path
+        android:pathData="M107,70 L135,78"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeAlpha="0.7" />
+    <path
+        android:pathData="M107,80 L135,88"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeAlpha="0.7" />
+    <path
+        android:pathData="M107,90 L135,98"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeAlpha="0.7" />
+    <!-- Pencil -->
+    <path
+        android:pathData="M130,40 L145,25 L150,30 L135,45 Z"
+        android:fillColor="#FF059669" />
+    <path
+        android:pathData="M128,42 L132,38"
+        android:strokeColor="#FF059669"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+    <!-- Small decorative dots -->
+    <path
+        android:pathData="M45,50m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"
+        android:fillColor="#FF6EE7B7" />
+    <path
+        android:pathData="M160,140m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"
+        android:fillColor="#FF6EE7B7" />
+    <path
+        android:pathData="M155,55m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:fillColor="#FFD1FAE5" />
+</vector>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors (Emerald Green) -->
+    <color name="primary">#FF10B981</color>
+    <color name="primary_dark">#FF059669</color>
+    <color name="primary_light">#FF6EE7B7</color>
+    <color name="primary_container">#FFD1FAE5</color>
+
+    <!-- Background Colors -->
+    <color name="background">#FFF5F5FA</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="surface_container">#FFF0F0F5</color>
+    <color name="surface_container_low">#FFFAFAFC</color>
+    <color name="surface_container_high">#FFE8E8EE</color>
+    <color name="surface_container_highest">#FFDCDCE3</color>
+
+    <!-- Text Colors -->
+    <color name="on_surface">#FF1C1C1E</color>
+    <color name="on_surface_variant">#FF6B6B76</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="on_primary_container">#FF064E3B</color>
+
+    <!-- Tertiary Colors (Teal accent) -->
+    <color name="tertiary">#FF0D9488</color>
+    <color name="tertiary_container">#FFCCFBF1</color>
+
+    <!-- Error Colors -->
+    <color name="error">#FFDC2626</color>
+    <color name="error_container">#FFFFE5E5</color>
+    <color name="on_error_container">#FF8B1A1A</color>
+
+    <!-- Border Colors -->
+    <color name="outline">#FFC7C7CC</color>
+    <color name="outline_variant">#FFE0E0E5</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary">#FF8E8E99</color>
+
+    <!-- Overlay Colors -->
+    <color name="scrim">#80000000</color>
+    <color name="lock_scrim">#E01C1C1E</color>
+</resources>

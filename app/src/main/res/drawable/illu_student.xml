@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="160dp"
+    android:viewportWidth="160"
+    android:viewportHeight="160">
+    <!-- Soft circle bg -->
+    <path
+        android:pathData="M80,80m-55,0a55,55 0,1 1,110 0a55,55 0,1 1,-110 0"
+        android:fillColor="#CCD1FAE5" />
+    <!-- Person head -->
+    <path
+        android:pathData="M80,55m-16,0a16,16 0,1 1,32 0a16,16 0,1 1,-32 0"
+        android:fillColor="#FFFFFFFF" />
+    <!-- Person body -->
+    <path
+        android:pathData="M55,110 Q55,85 80,85 Q105,85 105,110 L105,120 L55,120 Z"
+        android:fillColor="#FFFFFFFF" />
+    <!-- Laptop base -->
+    <path
+        android:pathData="M48,125 L112,125 Q115,125 115,128 L115,132 Q115,135 112,135 L48,135 Q45,135 45,132 L45,128 Q45,125 48,125 Z"
+        android:fillColor="#FF10B981" />
+    <!-- Laptop screen -->
+    <path
+        android:pathData="M52,105 L108,105 Q110,105 110,107 L110,122 Q110,124 108,124 L52,124 Q50,124 50,122 L50,107 Q50,105 52,105 Z"
+        android:fillColor="#FF064E3B" />
+    <!-- Screen content - lines -->
+    <path
+        android:pathData="M58,110 L85,110"
+        android:strokeColor="#FF10B981"
+        android:strokeWidth="2"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M58,115 L78,115"
+        android:strokeColor="#FF10B981"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.6" />
+    <!-- Small decorative dots -->
+    <path
+        android:pathData="M40,70m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:fillColor="#FF6EE7B7" />
+    <path
+        android:pathData="M125,95m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"
+        android:fillColor="#FF6EE7B7" />
+</vector>

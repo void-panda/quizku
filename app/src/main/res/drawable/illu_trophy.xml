@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="160dp"
+    android:viewportWidth="160"
+    android:viewportHeight="160">
+    <!-- Soft circle bg -->
+    <path
+        android:pathData="M80,80m-55,0a55,55 0,1 1,110 0a55,55 0,1 1,-110 0"
+        android:fillColor="#CCD1FAE5" />
+    <!-- Trophy cup body -->
+    <path
+        android:pathData="M60,50 L100,50 L95,85 Q93,95 80,95 Q67,95 65,85 Z"
+        android:fillColor="#FF10B981" />
+    <!-- Trophy handles -->
+    <path
+        android:pathData="M60,55 Q48,55 48,67 Q48,77 60,77"
+        android:strokeColor="#FF10B981"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M100,55 Q112,55 112,67 Q112,77 100,77"
+        android:strokeColor="#FF10B981"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <!-- Trophy base -->
+    <path
+        android:pathData="M75,95 L85,95 L85,105 L90,105 L90,110 L70,110 L70,105 L75,105 Z"
+        android:fillColor="#FF059669" />
+    <!-- Base plate -->
+    <path
+        android:pathData="M65,110 L95,110 Q97,110 97,112 L97,115 Q97,117 95,117 L65,117 Q63,117 63,115 L63,112 Q63,110 65,110 Z"
+        android:fillColor="#FF10B981" />
+    <!-- Star on trophy -->
+    <path
+        android:pathData="M80,60 L83,68 L91,68 L85,73 L87,81 L80,76 L73,81 L75,73 L69,68 L77,68 Z"
+        android:fillColor="#FFFFFFFF" />
+    <!-- Small decorative dots -->
+    <path
+        android:pathData="M42,55m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:fillColor="#FF6EE7B7" />
+    <path
+        android:pathData="M120,100m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"
+        android:fillColor="#FF6EE7B7" />
+</vector>

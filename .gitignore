@@ -1,0 +1,37 @@
+# Built outputs
+build/
+app/build/
+.gradle/
+local.properties
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+captures/
+.externalNativeBuild/
+.cxx/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Firebase (jangan commit API keys)
+app/google-services.json
+
+# Heap dumps & logs
+*.hprof
+*.log
+
+# Gradle wrapper jar
+gradle/wrapper/gradle-wrapper.jar
+
+# Temporary files
+DOWNLOAD_SCRIPT.txt
+sample_soal_teknologi_web.xlsx
+
+# Design files (bukan source code)
+smart_quis_design/

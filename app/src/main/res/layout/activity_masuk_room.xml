@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Gabung Ruangan"
+        app:titleTextColor="@color/on_surface" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/illu_student"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="Ilustrasi siswa" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gabung Ruangan"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/on_surface"
+                android:textSize="24sp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masukkan kredensial untuk bergabung"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="13sp"
+                android:layout_marginBottom="28dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Theme.QuizKu.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Label: Nama Pengguna -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NAMA PENGGUNA"
+                        style="@style/Theme.QuizKu.InputLabel"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etUsername"
+                        style="@style/Theme.QuizKu.InputField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Masukkan nama pengguna"
+                        android:layout_marginBottom="18dp" />
+
+                    <!-- Label: Kode Ruangan -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KODE RUANGAN"
+                        style="@style/Theme.QuizKu.InputLabel"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etRoomCode"
+                        style="@style/Theme.QuizKu.InputField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Contoh: ABC123"
+                        android:inputType="text"
+                        android:maxLength="6"
+                        android:letterSpacing="0.15"
+                        android:layout_marginBottom="24dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnJoin"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        style="@style/Theme.QuizKu.Button"
+                        android:text="Ikuti Kuis" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/scrim"
+        android:visibility="gone">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            app:indicatorColor="@color/primary"
+            app:trackCornerRadius="2dp" />
+
+    </FrameLayout>
+
+</LinearLayout>

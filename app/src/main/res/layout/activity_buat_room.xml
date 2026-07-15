@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Buat Ruangan"
+        app:titleTextColor="@color/on_surface" />
+
+    <!-- Step Indicator -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="48dp"
+        android:paddingVertical="16dp">
+
+        <!-- Step 1 Circle -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/step1Circle"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_circle_active" />
+
+            <TextView
+                android:id="@+id/step1Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/primary"
+                android:textSize="11sp"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+
+        <!-- Connector Line -->
+        <View
+            android:id="@+id/stepConnector"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/outline_variant" />
+
+        <!-- Step 2 Circle -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/step2Circle"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_circle_inactive" />
+
+            <TextView
+                android:id="@+id/step2Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="11sp"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Step 1: Room Details -->
+            <LinearLayout
+                android:id="@+id/step1Container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Theme.QuizKu.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/surface_container"
+                    android:layout_marginBottom="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="01. Identitas &amp; Aturan"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="JUDUL KUIS"
+                            style="@style/Theme.QuizKu.InputLabel"
+                            android:layout_marginBottom="6dp" />
+
+                        <EditText
+                            android:id="@+id/etTitle"
+                            style="@style/Theme.QuizKu.InputField"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Masukkan judul kuis"
+                            android:layout_marginBottom="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DURASI (MENIT)"
+                            style="@style/Theme.QuizKu.InputLabel"
+                            android:layout_marginBottom="6dp" />
+
+                        <EditText
+                            android:id="@+id/etDuration"
+                            style="@style/Theme.QuizKu.InputField"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Contoh: 30"
+                            android:inputType="number"
+                            android:text="30" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Room Code Display (hidden until created) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRoomCode"
+                    style="@style/Theme.QuizKu.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/surface_container"
+                    android:layout_marginBottom="14dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KODE RUANGAN"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp"
+                            android:letterSpacing="0.1"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/tvRoomCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/on_surface"
+                            android:textSize="28sp"
+                            android:letterSpacing="0.15" />
+
+                        <TextView
+                            android:id="@+id/tvCopyHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kode sudah disalin otomatis"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/tertiary"
+                            android:textSize="11sp"
+                            android:layout_marginTop="6dp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGenerateRoom"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    style="@style/Theme.QuizKu.Button"
+                    android:text="BUAT KODE RUANGAN"
+                    app:icon="@drawable/ic_bolt"
+                    app:iconGravity="textStart" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNextStep"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    style="@style/Theme.QuizKu.Button.Secondary"
+                    android:text="LANJUT UPLOAD SOAL"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- Step 2: Upload Soal -->
+            <LinearLayout
+                android:id="@+id/step2Container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Upload Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardUploadSection"
+                    style="@style/Theme.QuizKu.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/surface_container"
+                    android:layout_marginBottom="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="02. Pemasukan Data"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="14dp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardUpload"
+                            style="@style/Theme.QuizKu.Card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/surface_container_low">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:padding="28dp">
+
+                                <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:src="@drawable/illu_clipboard"
+                                    android:scaleType="fitCenter"
+                                    android:contentDescription="Upload soal" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Unggah File Excel"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:textColor="@color/on_surface"
+                                    android:textSize="14sp"
+                                    android:layout_marginTop="12dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="XLSX, XLS (MAKS. 5MB)"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textColor="@color/on_surface_variant"
+                                    android:textSize="10sp"
+                                    android:layout_marginTop="4dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pertanyaan, Opsi A-E, Jawaban Benar"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textColor="@color/on_surface_variant"
+                                    android:textSize="10sp"
+                                    android:textStyle="italic"
+                                    android:layout_marginTop="6dp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/tvFileName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp"
+                            android:layout_marginTop="8dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Summary Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSummary"
+                    style="@style/Theme.QuizKu.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/surface_container"
+                    android:layout_marginBottom="14dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ringkasan Manifes"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="6dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="KODE"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/on_surface_variant"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tvSummaryRoomCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:fontFamily="@font/poppins_bold"
+                                android:textColor="@color/on_surface"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingVertical="6dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="SOAL"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/on_surface_variant"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tvQuestionCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:fontFamily="@font/poppins_bold"
+                                android:textColor="@color/on_surface"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/outline_variant"
+                            android:layout_marginVertical="10dp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnStartQuiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    style="@style/Theme.QuizKu.Button"
+                    android:text="MULAI KUIS"
+                    android:enabled="false"
+                    android:layout_marginBottom="10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPrevStep"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    style="@style/Theme.QuizKu.Button.Secondary"
+                    android:text="KEMBALI" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+
+    <!-- Loading Overlay -->
+    <FrameLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/scrim"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            app:indicatorColor="@color/primary"
+            app:trackCornerRadius="2dp" />
+
+    </FrameLayout>
+
+</FrameLayout>

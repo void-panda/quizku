@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lock_scrim"
+    android:visibility="gone">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/lockModal"
+        style="@style/Theme.QuizKu.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="24dp"
+        app:cardBackgroundColor="@color/surface"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:gravity="center"
+                android:background="@drawable/bg_success_circle"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_bolt"
+                    app:tint="@color/on_primary" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kuis Selesai"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/on_surface"
+                android:textSize="22sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvLockDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waktu pengerjaan telah habis. Jawaban Anda telah dikirimkan secara otomatis."
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="28dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewResult"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                style="@style/Theme.QuizKu.Button"
+                android:text="Lihat Hasil" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/illu_trophy"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Ilustrasi piala" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasil Akhir"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/on_surface"
+                android:textSize="24sp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Score Circle -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:cardBackgroundColor="@color/surface_container"
+                app:cardCornerRadius="90dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/primary"
+                app:strokeWidth="4dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/primary"
+                        android:textSize="48sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="POIN"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.15" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvCongratulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kerja Bagus!"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/tertiary"
+                android:textSize="20sp"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Stats Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="32dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Theme.QuizKu.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    app:cardBackgroundColor="@color/surface_container">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvCorrectCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/tertiary"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Benar"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp"
+                            android:letterSpacing="0.1" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Theme.QuizKu.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    app:cardBackgroundColor="@color/surface_container">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvTotalQuestions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/primary"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Soal"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp"
+                            android:letterSpacing="0.1" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvUnanswered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak dijawab: 0 soal"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="13sp"
+                android:layout_marginBottom="24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvWrongHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jawaban Salah"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/on_surface"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layoutWrongAnswers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Back Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                style="@style/Theme.QuizKu.Button"
+                android:text="Kembali ke Dasbor"
+                android:layout_marginBottom="32dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/scrim"
+        android:visibility="gone">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            app:indicatorColor="@color/primary"
+            app:trackCornerRadius="2dp" />
+
+    </FrameLayout>
+
+</LinearLayout>
